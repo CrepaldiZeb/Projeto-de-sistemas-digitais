@@ -1,0 +1,15 @@
+LIBRARY ieee; 
+USE ieee.std_logic_1164.all; 
+
+ENTITY FFD_2 IS 
+PORT ( D, Clock : IN  STD_LOGIC ; 
+Q  : OUT  STD_LOGIC ) ; 
+END FFD_2 ; 
+ARCHITECTURE FUNC OF FFD_2 IS    
+BEGIN
+PROCESS
+BEGIN
+WAIT UNTIL Clock'EVENT AND Clock = '1' ;
+Q <= D ; 
+END PROCESS ; 
+END FUNC ;
